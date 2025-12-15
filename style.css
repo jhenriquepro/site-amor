@@ -1,0 +1,165 @@
+/* --- 1. CONFIGURAÇÕES GERAIS E VARIÁVEIS --- */
+:root {
+    /* Paleta de Cores Romântica */
+    --bg-color: #FFF0F5;       /* Lavanda avermelhada bem clara */
+    --card-bg: #FFFFFF;        /* Branco puro para os cartões */
+    --primary-color: #D65A76;  /* Rosa queimado para botões/destaques */
+    --text-color: #4A4A4A;     /* Cinza escuro para leitura confortável */
+    --accent-color: #FF8FA3;   /* Rosa mais claro para detalhes */
+    
+    /* Espaçamentos padrão */
+    --gap: 20px;
+    --padding: 20px;
+}
+
+/* Reset básico para garantir consistência */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: 'Nunito', sans-serif; /* Fonte fácil de ler */
+    color: var(--text-color);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza tudo */
+    padding-bottom: 40px; /* Espaço no final para scroll */
+}
+
+/* --- 2. CABEÇALHO (HERO) --- */
+.hero {
+    text-align: center;
+    padding: 40px 20px;
+    width: 100%;
+}
+
+.photo-frame {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 20px; /* Centraliza a foto */
+    border-radius: 50%; /* Deixa a foto redonda */
+    border: 4px solid var(--primary-color);
+    padding: 4px; /* Espaço entre a foto e a borda */
+    background: white;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(214, 90, 118, 0.2); /* Sombra suave */
+}
+
+.photo-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a foto não distorça */
+    border-radius: 50%;
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive; /* Fonte manuscrita */
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #888;
+}
+
+/* --- 3. CONTEÚDO PRINCIPAL E CARDS --- */
+main {
+    width: 90%; /* Ocupa 90% da largura do celular */
+    max-width: 400px; /* Limite para não estourar em telas maiores */
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+}
+
+.card {
+    background-color: var(--card-bg);
+    padding: 25px;
+    border-radius: 20px; /* Bordas bem arredondadas (moderno) */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Efeito de elevação */
+    text-align: center;
+}
+
+.love-letter p {
+    text-align: justify;
+}
+
+h2 {
+    font-family: 'Dancing Script', cursive;
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+/* --- 4. DESTAQUES ESPECÍFICOS --- */
+.highlight-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    line-height: 1;
+}
+
+h3 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.8rem;
+}
+
+/* --- 5. ÁREA INTERATIVA E BOTÃO --- */
+.interaction-area {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.instruction {
+    font-size: 0.9rem;
+    color: #999;
+    margin-bottom: 15px;
+}
+
+.btn-heart {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 50px; /* Botão pílula */
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(214, 90, 118, 0.4);
+    transition: transform 0.2s, background-color 0.2s;
+    width: 100%; /* Botão largo para facilitar o toque no celular */
+}
+
+/* Feedback visual ao tocar */
+.btn-heart:active {
+    transform: scale(0.95); /* Efeito de "apertar" */
+    background-color: #b5405c;
+}
+
+.hidden-message {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--text-color);
+    min-height: 50px; /* Reserva espaço para o texto não pular */
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.hidden-message.show {
+    opacity: 1;
+}
+
+/* --- 6. RODAPÉ --- */
+footer {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #aaa;
+}
